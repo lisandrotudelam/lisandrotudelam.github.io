@@ -17,41 +17,55 @@ body {
     align-items: center;
 }
 
-.head {
+.head1 {
+    background-color: transparent;
     display:flex;
     align-items: center;
     justify-content: space-between;
-    height: 63px;
-    background: #171717;
+    height: 55px;
     position: fixed;
     width: 100%;
     z-index: 100%;
+    transition: 0.4s;
+    border-bottom: none;
+    z-index: 1000;
+}
+
+.logo img {
+    margin-left: 10px;
+    height: auto;
+    width: 50px;
 }
 
 .navbar {
+    margin-top: 20px;
     display: flex;
     margin-right: 10px;
+    
 }
 
-.logo a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 20px;
-}
+
+
+
 
 .navbar a {
+    color: #fff;
     display: block;
     padding: 20px 20px;
-    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    transition:0.6s;
 }
 
 .navbar a:hover {
-    background: #3f3f3f;
+    color: #3f3f3f;
 }
+
+
+
+
 
 .header {
     display: flex;
@@ -90,6 +104,8 @@ p {
     color: #fff;
     text-decoration: none;
     background:#9c27b0 ;
+    border-radius: 10px;
+    transition: background 0.4s;
 }
 
 .btn:hover {
@@ -98,17 +114,20 @@ p {
 
 .btn-home {
     display: flex;
+    
+   
 }
 
 .btn-home a{
     margin: 0 10px;
+    
+    
 }
 
 .content {
-    height: 50vh;
+    height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -118,58 +137,89 @@ p {
     background: #1f1d1d;
 }
 
-.box-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-}
 
-.box-container .box {
-    height: 11rem;
-    width: 17rem;
-    background: #101010;
-    text-align: center;
-    border-radius: 1rem;
-    box-shadow: 0 .3rem  5rem rgba(0, 0, 0, .5);
-    margin: 2rem;
-}
+/*nueva parte deslizante en productos*/
 
-.box-container .box i{
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    background: #9c27b0;
-    font-size: 2rem;
-    margin: 1rem 0;
-}
 
-.box-container .box h3 {
+.swiper {
+    width: 100%;
+    max-width: 1100px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    padding: 50px;
+  }
+
+.textoHover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #1f1d1d;
     font-size: 20px;
-    color: #9c27b0;
+    font-family: montserrat;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.4s ease;
+    z-index: 1;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    position: relative;
+    opacity: 1;
+    border-radius: 10px;
+    
+    overflow: hidden;
+  }
+  .swiper-slide img {
+    max-width: 130%;
+    max-height: 200%;
+    transition: opacity 0.3s ease;
+    object-fit: cover;
+   
+  }
+.swiper-slide:hover img{
+    opacity: 0.5;
+  }
+
+.swiper-slide:hover .textoHover{
+    opacity: 1;
 }
 
-.box-container .box p {
-    font-size: 16px;
-    padding: 0 15px;
-}
+
+
+
+
+
+
+
+
+
+
 
 .about {
+    padding: 150px;
     background: #171717;
 }
 
 .price {
-    background: url(img/ski.jpg) no-repeat center;
-    background-attachment: fixed;
-    text-align: center;
-    background-size: center ;
+    background: url(img/jr5j.jpg) no-repeat center;
+    background-size: cover;
+    font-family: montserrat;
+    
+}
+.contain p{
+    color: #ffffff;
 }
 
 .contact {
-    padding-top: 20px;
+    padding-top: 150px;
     background: #171717;
     padding-bottom: 0;
 
@@ -187,4 +237,9 @@ p {
     .navbar {
         display: none;
     }
+}
+.map {
+    margin-bottom: 150;
+    padding: 50;
+    border-radius: 20px;
 }
