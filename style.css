@@ -8,7 +8,7 @@
 
 body {
     text-align: center;
-    font-family: sans-serif;
+    font-family: montserrat;
 }
 
 .header {
@@ -120,22 +120,9 @@ p {
 
 .btn-home a{
     margin: 0 10px;
-    
-    
 }
 
-.content {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.sau {
-    padding: 30px;
-    background:none ;
-    background: #1f1d1d;
-}
 
 
 /*nueva parte deslizante en productos*/
@@ -143,11 +130,9 @@ p {
 
 .swiper {
     width: 100%;
-    max-width: 1100px;
-    height: 300px;
+    height: 100%;
     position: relative;
     overflow: hidden;
-    padding: 50px;
   }
 
 .textoHover {
@@ -174,15 +159,19 @@ p {
     position: relative;
     opacity: 1;
     border-radius: 10px;
-    
-    overflow: hidden;
+
   }
   .swiper-slide img {
-    max-width: 130%;
-    max-height: 200%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     transition: opacity 0.3s ease;
     object-fit: cover;
-   
+    position: absolute;
+   border-radius: 10px;
   }
 .swiper-slide:hover img{
     opacity: 0.5;
@@ -202,16 +191,34 @@ p {
 
 
 
-
-.about {
-    padding: 150px;
-    background: #171717;
+.content {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.sau {
+    padding: 30px;
+    background:none ;
+    background: #1f1d1d;
+}
+.about {
+    padding: 50px;
+    height: 100vh;
+    width: 100%;
+    background: #171717;
+}
+.contact{
+    height: 65vh;
+}
 .price {
     background: url(img/jr5j.jpg) no-repeat center;
     background-size: cover;
     font-family: montserrat;
+    padding: 50px;
+    height: 100vh;
+    width: 100%;
     
 }
 .contain p{
@@ -219,27 +226,48 @@ p {
 }
 
 .contact {
-    padding-top: 150px;
+    padding-top: 50px;
     background: #171717;
     padding-bottom: 0;
 
 }
 
-@media (max-width:768) {
+.contact img {
+   
+    border-radius: 20px;
+    max-width: 100%;
+    transition: 0.4s ease;
+}
+.contact img:hover {
+   
+    border-radius: 20px;
+    max-width: 100%;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width:768px) {
 
     .title {
         margin-bottom:0 ;
         font-size: 40px;
     }
-    .sau{
-        height: 120vh;
+    .navbar a {
+        font-size: 10px;
+        padding: 10px ;
     }
-    .navbar {
-        display: none;
+    
+    .textoHover{
+        font-size: 15px;
     }
-}
-.map {
-    margin-bottom: 150;
-    padding: 50;
-    border-radius: 20px;
-}
+   .swiper-slide{
+    width: 300px !important;
+    max-width: 3000px!important;
+    margin: 10px  !important;
+   }
+   .swiper-slide img {
+    border-radius: 10px;
+   }
+   .content p {
+    font-size: 16px;
+   }
+   }
